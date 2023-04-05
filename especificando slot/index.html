@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <button @click="showModal = true">
+            abrir modal
+        </button>
+
+      <modal v-show="showModal" @Batata="showModal = false">
+    
+        <h1 slot="header"> titulo definido pelo slot</h1>
+        
+       sem identificação ficara no slot que nao tem nome<!-- comenta aqui para ver o texto padrao -->
+     
+        <template slot="footer"> 
+
+            <button class="button is-success">deguinho</button>
+
+
+        </template>
+    </modal>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
